@@ -1,0 +1,15 @@
+// VARIABLE SIZED SLIDING WINDOW //
+li = [9,3,4,8,1]
+ans = 0
+l = 0
+k = 13
+temp = 0
+for r in range(len(li)):
+    temp += li[r]
+
+    while(temp > k):
+        temp -= li[l]
+        l +=1 
+    print(li[l:r+1], sum(li[l:r+1]),temp)
+    ans = max(ans, r - l + 1)
+print(ans)
