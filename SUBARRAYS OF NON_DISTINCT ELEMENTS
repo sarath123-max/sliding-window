@@ -1,0 +1,12 @@
+def create_subarrays(arr, k):
+    # Generate subarrays of length k without padding
+    subarrays = []
+    for i in range(len(arr) - k + 1):
+        subarrays.append(arr[i:i + k])  # Only take subarrays of length k
+    return subarrays
+
+# Example usage
+array = [1, 5, 4, 2, 9]
+k = 3
+result = create_subarrays(array, k)
+print(result)
